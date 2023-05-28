@@ -9,13 +9,13 @@ import axios from 'axios'
 const StatusForm = ({ btnText, setDisplay, setOrder }) => {
 
     // FETCH PLATE TYPES LIST
-    const { loading, data, error } = useFetch('http://localhost:3000/api/v1/plateType/')
+    const { loading, data, error } = useFetch('https://app-taller-production-9f66.up.railway.app/api/v1/plateType/')
 
     const { register, handleSubmit, reset } = useForm()
     const handleStatus = (data) => {
         // FETCH ORDER DATA 
         if (data.order) {
-            axios.get(`http://localhost:3000/api/v1/order/${data.order}`)
+            axios.get(`https://app-taller-production-9f66.up.railway.app/api/v1/order/${data.order}`)
             .then(res => {
                 setOrder(res.data)
                 setDisplay('receipt')

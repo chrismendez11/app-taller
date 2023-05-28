@@ -6,7 +6,7 @@ import axios from 'axios'
 const RemakeForm = ({ setDisplay, setOrder }) => {
 
     // FETCH PLATE TYPES LIST
-    const { loading, data, error } = useFetch('http://localhost:3000/api/v1/plateType/')
+    const { loading, data, error } = useFetch('https://app-taller-production-9f66.up.railway.app/api/v1/plateType/')
 
     const { register, handleSubmit, reset } = useForm()
     const handleOrderNumber = (info) => {
@@ -14,7 +14,7 @@ const RemakeForm = ({ setDisplay, setOrder }) => {
 
         // FETCH ORDER DATA  
         if (info.order) {
-            axios.get(`http://localhost:3000/api/v1/order/${info.order}`)
+            axios.get(`https://app-taller-production-9f66.up.railway.app/api/v1/order/${info.order}`)
             .then(res => {
                 setOrder(res.data)
                 setDisplay('info')

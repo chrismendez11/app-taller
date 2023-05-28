@@ -8,7 +8,7 @@ import {useSelector} from 'react-redux'
 const DataForm = ({ setDisplay, btnText, order, carPlate, setOrder }) => {
 
   // FETCH GARAGES LIST
-  const { loading, data, error } = useFetch('http://localhost:3000/api/v1/garage/')
+  const { loading, data, error } = useFetch('https://app-taller-production-9f66.up.railway.app/api/v1/garage/')
 
   const { register, handleSubmit, reset } = useForm()
   const request = useSelector((state) => state.request)
@@ -30,7 +30,7 @@ const DataForm = ({ setDisplay, btnText, order, carPlate, setOrder }) => {
     }
 
     if (info.date && info.garage && info.description) {
-      axios.post(`http://localhost:3000/api/v1/order/`, body)
+      axios.post(`https://app-taller-production-9f66.up.railway.app/api/v1/order/`, body)
         .then(res => {
           setOrder(res.data)
           setDisplay('receipt')
@@ -49,7 +49,7 @@ const DataForm = ({ setDisplay, btnText, order, carPlate, setOrder }) => {
     }
 
     if (info.date || info.garage || info.description) {
-      axios.patch(`http://localhost:3000/api/v1/order/${order.id}`, body)
+      axios.patch(`https://app-taller-production-9f66.up.railway.app/api/v1/order/${order.id}`, body)
         .then(res => {
           setOrder(res.data.order)
           setDisplay('receipt')

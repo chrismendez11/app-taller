@@ -6,7 +6,7 @@ import axios from 'axios'
 const NewForm = ({ setDisplay, setCarPlate }) => {
 
   // FETCH PLATE TYPES LIST
-  const { loading, data, error } = useFetch('http://localhost:3000/api/v1/plateType/')
+  const { loading, data, error } = useFetch('https://app-taller-production-9f66.up.railway.app/api/v1/plateType/')
 
   const { register, handleSubmit, reset } = useForm()
   const handleCarPlate = (info) => {
@@ -19,7 +19,7 @@ const NewForm = ({ setDisplay, setCarPlate }) => {
 
     // POST NEW CAR PLATE   
     if (info.carPlate) {
-        axios.post(`http://localhost:3000/api/v1/carPlate/`, body)
+        axios.post(`https://app-taller-production-9f66.up.railway.app/api/v1/carPlate/`, body)
         .then(res => {
             setCarPlate(res.data)
             setDisplay('data')

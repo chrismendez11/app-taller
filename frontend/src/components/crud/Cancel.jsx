@@ -9,7 +9,7 @@ const Cancel = () => {
   const [order, setOrder] = useState()
 
   const handleDeleteOrder = () => {
-    axios.delete(`http://localhost:3000/api/v1/order/${order.id}`)
+    axios.delete(`https://app-taller-production-9f66.up.railway.app/api/v1/order/${order.id}`)
       .then(res => {
         setDisplay('status')
         alert(`Order with id ${order.id} deleted successfully`)

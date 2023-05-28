@@ -1,0 +1,88 @@
+.make-appointment__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.data-request-title__container {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.plate-input__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.plate-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.plate-input span {
+    font-size: 1.4rem;
+}
+
+input {
+    width: 200px;
+}
+
+.plate-input-btn__container {
+    width: 200px;
+    height: 50px;
+    border: 1px solid #ff0a35;
+    display: flex;
+    border-radius: 25px;
+}
+
+.plate-input-btn__container input {
+    width: 75%;
+    height: 100%;
+    font-size: 2.4rem;
+    padding: 0 20px;
+    border: none;
+    border-radius: 25px;
+}
+
+.plate-input-btn__container input:focus {
+    outline: none;
+}
+
+
+.plate-input-btn__container button {
+    width: 25%;
+    height: 100%;
+}
+
+.fa-arrow-right {
+    font-size: 1.6rem;
+}
+
+.service-info__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.service-info {
+    
+}
+
+.service-info h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.service-info span {
+    font-size: 1.6rem;
+    font-weight: 400;
+}

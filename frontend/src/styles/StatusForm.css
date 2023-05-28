@@ -1,0 +1,10 @@
+.confirm-appointment__container button {
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #00a6dd;
+}
+
+.confirm-appointment__container button:hover {
+    background-color: #0094c6;
+}

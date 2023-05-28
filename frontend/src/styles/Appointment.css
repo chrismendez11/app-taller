@@ -1,0 +1,23 @@
+.cita-btns__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    justify-items: center;
+}
+
+.cita-btns__container .cita-btn {
+    background-color: rgba(255, 10, 53, 0.5);
+}
+
+.cita-btns__container .cita-btn:hover {
+    background-color: rgba(255, 10, 53, 1);
+}
+
+/* .cita-btns__container .cita-btn:focus {
+    background-color: rgba(255, 10, 53, 1);
+} */
+
+.cita-btn-selected {
+    background-color: rgba(255, 10, 53, 1);;
+}
